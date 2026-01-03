@@ -14,7 +14,7 @@ export default function Sidebar({ images, currentIndex, setCurrentIndex, setZoom
         overflow: "hidden",
       }}
     >
-      {/* Pinned top */}
+      {/* file heading */}
       <div
         style={{
           padding: "15px",
@@ -25,7 +25,7 @@ export default function Sidebar({ images, currentIndex, setCurrentIndex, setZoom
           zIndex: 10,
         }}
       >
-        <h3 style={{ textAlign: "center", color: "cyan", marginBottom: "10px" }}>Files</h3>
+        <h3 style={{ textAlign: "center", color: "cyan", marginBottom: "10px" }}>All Files</h3>
         <button
           onClick={onUploadClick}
           style={{
@@ -42,7 +42,7 @@ export default function Sidebar({ images, currentIndex, setCurrentIndex, setZoom
         </button>
       </div>
 
-      {/* Scrollable files */}
+      {/* file div */}
       <div style={{ flex: 1, overflowY: "auto", padding: "10px 15px", minHeight: 0 }}>
         {images.length === 0 && <p style={{ opacity: 0.5, textAlign: "center" }}>No photos uploaded</p>}
         {images.map((img, i) => (
@@ -69,7 +69,7 @@ export default function Sidebar({ images, currentIndex, setCurrentIndex, setZoom
         ))}
       </div>
 
-      {/* Collections box */}
+      {/* Collection bar */}
       <div
         style={{
           height: "220px",
@@ -80,7 +80,7 @@ export default function Sidebar({ images, currentIndex, setCurrentIndex, setZoom
           padding: "10px",
           boxSizing: "border-box",
           flexShrink: 0,
-          marginBottom: "20px", // Fixed bottom margin so rounded corners visible
+          marginBottom: "20px", 
         }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px", fontSize: "16px" }}>

@@ -6,7 +6,7 @@ export default function ImageInfoBar({ images, currentIndex }) {
       style={{
         width: "90%",
         maxWidth: "820px",
-        height: "50px",               // ❗ Fixed height
+        height: "50px",               
         minHeight: "50px",
         maxHeight: "50px",
         background: "#1a1a1a",
@@ -17,14 +17,14 @@ export default function ImageInfoBar({ images, currentIndex }) {
         gridTemplateColumns: "1fr 120px 120px",
         alignItems: "center",
         fontSize: "15px",
-        overflow: "hidden",           // ❗ Prevent expansion
+        overflow: "hidden",           
         boxSizing: "border-box",
       }}
     >
-      {/* File Name (no wrap + ellipsis) */}
+      {/* name of our file */}
       <div
         style={{
-          whiteSpace: "nowrap",       // ❗ No wrapping
+          whiteSpace: "nowrap",      
           overflow: "hidden",
           textOverflow: "ellipsis",
         }}
@@ -32,12 +32,12 @@ export default function ImageInfoBar({ images, currentIndex }) {
         {currentIndex !== null ? images[currentIndex]?.name : "No Image"}
       </div>
 
-      {/* Index */}
+      {/* Index of current img*/}
       <div style={{ textAlign: "center" }}>
         {currentIndex !== null ? currentIndex + 1 : "—"} / {images.length}
       </div>
 
-      {/* Total Count */}
+      {/* Total of images */}
       <div style={{ textAlign: "right" }}>
         Total: {images.length}
       </div>

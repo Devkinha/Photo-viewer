@@ -51,7 +51,6 @@ export default function App() {
   const zoomIn = () => setZoom((z) => Math.min(z + 0.15, 4));
   const zoomOut = () => setZoom((z) => Math.max(z - 0.15, 0.5));
 
-  // ✔ NEW: Reset zoom
   const resetZoom = () => setZoom(1);
 
   return (
@@ -65,7 +64,7 @@ export default function App() {
         fontFamily: "Poppins, sans-serif",
         display: "grid",
         gridTemplateRows: "60px 1fr",
-        touchAction: "none", // ❗ Add this to prevent page zooming
+        touchAction: "none",
       }}
     >
 
@@ -92,12 +91,12 @@ export default function App() {
             boxSizing: "border-box",
           }}
         >
-          {/* Zoom bar is always visible */}
+          {/* Zoom bar*/}
           <ZoomBar
             zoom={zoom}
             onZoomIn={zoomIn}
             onZoomOut={zoomOut}
-            onReset={resetZoom} // ✔ reset always visible
+            onReset={resetZoom} 
           />
 
           <ImageViewer images={images} currentIndex={currentIndex} zoom={zoom} setZoom={setZoom} onNext={nextImage} onPrev={prevImage} />

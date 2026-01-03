@@ -59,7 +59,7 @@ export default function ImageViewer({ images, currentIndex, zoom, setZoom, onNex
         <img
           src={images[currentIndex]?.url}
           style={{
-            transform: `scale(${zoom})`,  // ✔ Only image zooms now
+            transform: `scale(${zoom})`,   
             maxWidth: "100%",
             maxHeight: "100%",
             objectFit: "contain",
